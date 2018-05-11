@@ -46,5 +46,5 @@ def ymlToJson(file):
     with open(commentsPath + "/" + file) as stream:
         return yaml.load(stream)
 
-commentsYML = [f for f in os.listdir(commentsPath) if os.path.isfile(join(commentsPath, f))]
+commentsYML = [f for f in listdir(commentsPath) if isfile(join(commentsPath, f))]
 COMMENTS = list(map(ymlToJson, commentsYML))
