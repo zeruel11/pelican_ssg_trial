@@ -33,3 +33,15 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+PLUGINS = ['tipue_search.tipue_search']
+
+#Staticman Comments
+commentsPath = "./content/comments"
+
+def ymlToJson(file):
+    with open(commentsPath + "/" + file) as stream:
+        return yaml.load(stream)
+
+commentsYML = [f for f in listdir(commentsPath) if isfile(join(commentsPath, f))]
+COMMENTS = list(map(ymlToJson, commentsYML))
