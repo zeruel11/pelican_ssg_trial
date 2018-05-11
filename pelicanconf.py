@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 from os import listdir
+from os.path import isfile, join
+import yaml, json, sys
 
 AUTHOR = 'zeruel'
 SITENAME = 'Pelican Static Site Gen'
@@ -44,5 +46,5 @@ def ymlToJson(file):
     with open(commentsPath + "/" + file) as stream:
         return yaml.load(stream)
 
-commentsYML = [f for f in listdir(commentsPath) if isfile(join(commentsPath, f))]
+commentsYML = [f for f in os.listdir(commentsPath) if os.path.isfile(join(commentsPath, f))]
 COMMENTS = list(map(ymlToJson, commentsYML))
