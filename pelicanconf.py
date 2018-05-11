@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from os import listdir
 
 AUTHOR = 'zeruel'
 SITENAME = 'Pelican Static Site Gen'

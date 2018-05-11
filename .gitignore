@@ -2,3 +2,4 @@
 /output
 /.vscode
 /tipue_search/__pycache__
+*.pyc
