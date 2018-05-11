@@ -7,7 +7,7 @@ import yaml, json, sys
 
 AUTHOR = 'zeruel'
 SITENAME = 'Pelican Static Site Gen'
-SITEURL = ''
+SITEURL = 'https://wonderful-sinoussi-c62dfb.netlify.com'
 
 PATH = 'content'
 
